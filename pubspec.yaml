@@ -1,0 +1,9 @@
+name: eco_volt_charge_workspace
+description: EcoVolt Charge - On-demand EV charging platform monorepo
+publish_to: 'none'
+
+environment:
+  sdk: ^3.6.0
+
+dev_dependencies:
+  melos: ^6.3.0

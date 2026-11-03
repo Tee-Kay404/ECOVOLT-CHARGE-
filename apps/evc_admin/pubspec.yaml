@@ -1,0 +1,53 @@
+name: evc_admin
+description: EcoVolt Charge - Admin Dashboard for fleet management
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management - Provider
+  provider: ^6.1.2
+
+  # Serverpod Client
+  evc_client:
+    path: ../../evc_client
+  serverpod_flutter: ^3.4.3
+  serverpod_auth_shared_flutter: ^3.4.3
+
+  # UI & Design
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.16
+  google_fonts: ^6.2.1
+  phosphor_flutter: ^2.1.0
+
+  # Charts & Visualization
+  fl_chart: ^0.69.2
+
+  # Maps
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.0
+
+  # Data Tables
+  data_table_2: ^2.5.15
+
+  # Utilities
+  intl: ^0.20.0
+  shared_preferences: ^2.3.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets will be added later
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/

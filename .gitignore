@@ -1,0 +1,27 @@
+# Misc
+.DS_Store
+.env
+*.env
+.env.*
+.history
+.vscode/
+.idea/
+*.iml
+
+# Flutter/Dart
+.dart_tool/
+build/
+.pub-cache/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+**/local.properties
+**/*.jks
+**/*.keystore
+**/*.key
+**/*.pem
+**/*.p12
+
+# Serverpod
+generated/
+**/config/passwords.yaml

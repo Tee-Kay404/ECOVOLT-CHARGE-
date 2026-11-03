@@ -1,0 +1,66 @@
+name: eco_volt_charge
+repository: https://github.com/your-org/eco_volt_charge
+
+packages:
+  - evc_server
+  - evc_client
+  - apps/*
+  - packages/*
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+    
+  version:
+    message: "chore: release %v"
+    linkToCommits: true
+
+scripts:
+  analyze:
+    description: Run static analysis on all packages
+    run: melos exec -- dart analyze .
+
+  format:
+    description: Format all Dart files
+    run: melos exec -- dart format .
+
+  test:
+    description: Run tests in all packages
+    run: melos exec -- flutter test
+
+  generate:
+    description: Generate Serverpod code
+    run: |
+      cd evc_server && serverpod generate
+
+  clean:
+    description: Clean all packages
+    run: melos exec -- flutter clean
+
+  build:user:
+    description: Build user app
+    run: cd apps/evc_user && flutter build apk --release
+
+  build:driver:
+    description: Build driver app
+    run: cd apps/evc_driver && flutter build apk --release
+
+  build:admin:
+    description: Build admin dashboard
+    run: cd apps/evc_admin && flutter build web --release
+
+  server:docker:up:
+    description: Start Docker containers (PostgreSQL + PostGIS + Redis)
+    run: cd evc_server && docker-compose up -d
+
+  server:docker:down:
+    description: Stop Docker containers
+    run: cd evc_server && docker-compose down
+
+  server:start:
+    description: Start the Serverpod server
+    run: cd evc_server && dart bin/main.dart
+
+  server:migrate:
+    description: Apply database migrations
+    run: cd evc_server && dart bin/main.dart --apply-migrations

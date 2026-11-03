@@ -1,0 +1,59 @@
+name: evc_driver
+description: EcoVolt Charge - Driver App for providing on-demand EV charging
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  # State Management - Provider
+  provider: ^6.1.2
+  
+  # Serverpod Client
+  evc_client:
+    path: ../../evc_client
+  serverpod_flutter: ^3.4.3
+  serverpod_auth_shared_flutter: ^3.4.3
+  
+  # Maps & Location
+  mapbox_maps_flutter: ^2.4.0
+  geolocator: ^13.0.2
+  geocoding: ^3.0.0
+  
+  # UI & Design
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.16
+  google_fonts: ^6.2.1
+  shimmer: ^3.0.0
+  flutter_animate: ^4.5.2
+  
+  # Utilities
+  intl: ^0.20.0
+  url_launcher: ^6.3.1
+  shared_preferences: ^2.3.4
+  flutter_secure_storage: ^9.2.3
+  
+  # Networking
+  connectivity_plus: ^6.1.1
+  
+  # Background location
+  flutter_background_geolocation: ^4.16.3
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+  
+  # Assets will be added later
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+  #   - assets/animations/
